@@ -6,7 +6,7 @@ btnCanc=document.getElementById("btnCanc");
 //variables
 var inputOne=0;
 var inputTwo=0;
-let sum=0;
+
 var isFirst=true;
 var op="";
 // btnNum.addEventListener('click',addNum(btnNum))
@@ -51,16 +51,22 @@ function canc(){
     console.log("input= "+inputOne+" 1st "+isFirst+" operazione: "+op);
 }
 
-btnResult.addEventListener('click',result());
+//btnResult.addEventListener('click',result());
 
 function result(){
+    let sum=0;
+    console.log(isFirst+op);
     if(isFirst){
-        display.value="Inserire operatore prima, ricomincia da capo"
+        console.log(isFirst+op);
+        display.value="press c"
     }else{
+        
         inputTwo=parseInt(display.value);
+        console.log(isFirst+op+inputTwo);
         switch(op){
             case 'plus':
                 sum=inputOne+inputTwo;
+                display.value=sum;
                 break;
             case 'min':
                 sum=inputOne-inputTwo;
@@ -71,9 +77,14 @@ function result(){
                 display.value=sum;
                 break;
             case 'div':
-                sum=inputOne/inputTwo;
-                display.value=sum;
-                break;
+                if(inputTwo=0){
+                    display.value="impossibru";
+                }else{
+                    sum=inputOne/inputTwo;
+                    display.value=sum;
+                    break;
+                }
+                
         }
 
     }
