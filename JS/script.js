@@ -1,17 +1,13 @@
 //buttons
 btnNum =document.getElementsByClassName("btnNum");
 btnResult=document.getElementById("btnResult");
-btnSum=document.getElementById("btnSum");
-btnMin=document.getElementById("btnMin");
-btnPer=document.getElementById("btnPer");
-btnDiv=document.getElementById("btnDiv");
 const display=document.getElementById("display");
 btnCanc=document.getElementById("btnCanc");
 //variables
-var inputOne=String;
-var inputTwo=String;
+var inputOne=0;
+var inputTwo=0;
 var isFirst=true;
-
+var op="";
 // btnNum.addEventListener('click',addNum(btnNum))
 // function addNum(numb){
 //     if(isFirst){
@@ -23,9 +19,33 @@ var isFirst=true;
 //     }
 // }
 
+
+//aggiunge valori alla stringa
 function appendToDisplay(input){
     display.value+=input;
 }
+
+//cancella la stringa
 function clearDisplay(){
-    display.value=="";
+    display.value="";
+}
+
+//operazioni
+function operation(operation){
+    if (isFirst){
+        inputOne=parseInt(display.value);
+        clearDisplay()
+        isFirst=false;
+        op=operation;
+        console.log("input= "+inputOne+" 1st "+isFirst+" operazione: "+op);
+    }
+}
+
+//
+//resetta tutto
+function canc(){
+    clearDisplay();
+    isFirst=true;
+    op="";
+    console.log("input= "+inputOne+" 1st "+isFirst+" operazione: "+op);
 }
