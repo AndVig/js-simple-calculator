@@ -15,4 +15,4 @@ verificare che non si stia cercando di dividere per 0
 M1 soluzione:
 - 2 variabili input che registrino i valori dei due numeri inseriti (prima e dopo il click dell'operatore)
 - creo una variabile (booleana) che mi dica se il valore che si sta inserendo corrisponda al primo o al secondo valore
-- creo una funzione che per ogni bottone cliccato, se all'interno contiene un numero lo aggiunge al valore di inpute lo mostri sul display della calcolatrice
+- creo una funzione che per ogni bottone cliccato, se all'interno contiene un numero lo aggiunge al valore di inpute lo mostri sul display della calcolatrice (id=result)

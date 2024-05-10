@@ -24,27 +24,27 @@
             <img src="img/Boosio-logo.png" alt="Boosio" />
           </div>
         </header>
-        <div id="result">0</div>
+        <input id="display" readonly>
         <div class="buttons">
           <div class="row numbers">
-            <button id="btn7">7</button>
-            <button id="btn8">8</button>
-            <button id="btn9">9</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
 
-            <button id="btn4">4</button>
-            <button id="btn5">5</button>
-            <button id="btn6">6</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
 
-            <button id="btn1">1</button>
-            <button id="btn2">2</button>
-            <button id="btn3">3</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
 
-            <button id="btn0" class="large">0</button>
+            <button onclick="appendToDisplay('0')" class="large">0</button>
             <button id="btnResult" class="orange">=</button>
           </div>
 
           <div class="row operators">
-            <button id="btnCanc" class="orange">C</button>
+            <button onclick="canc()" class="orange">C</button>
             <button id="btnSum">+</button>
             <button id="btnMin">-</button>
             <button id="btnPer">&#215;</button>
@@ -53,5 +53,7 @@
         </div>
       </div>
     </main>
+    <script src="./JS/script.js"></script>
+
   </body>
 </html>
