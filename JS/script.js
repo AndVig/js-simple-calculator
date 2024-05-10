@@ -77,7 +77,7 @@ function result(){
                 display.value=sum;
                 break;
             case 'div':
-                if(inputTwo=0){
+                if(inputTwo==0){
                     display.value="impossibru";
                 }else{
                     sum=inputOne/inputTwo;
